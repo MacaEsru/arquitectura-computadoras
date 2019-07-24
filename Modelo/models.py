@@ -4,8 +4,8 @@ from django.utils import timezone
 class Alumno(models.Model):
     rfid_alumno = models.CharField(max_length=254, null=False)
     name_alumno = models.CharField(max_length=254, null=False)
-    apellidoMaterno = models.CharField(max_length=254, null=False)
     apellidoPaterno = models.CharField(max_length=254, null=False)
+    apellidoMaterno = models.CharField(max_length=254, null=False)
     matricula_alumno = models.IntegerField(null=False)
     carrera_alumno = models.CharField(max_length=254, null=False)
     delete = models.BooleanField(default=False)
@@ -13,7 +13,7 @@ class Alumno(models.Model):
 
     def __str__(self):
         return self.name
-    
+
     class Meta:
         db_table = 'Alumno'
 
